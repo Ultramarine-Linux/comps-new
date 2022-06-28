@@ -2,6 +2,12 @@
 <!DOCTYPE comps PUBLIC "-//Red Hat, Inc.//DTD Comps info//EN" "comps.dtd">
 <comps>
   <group>
+    <id>admin-tools</id>
+    <_name>admin-tools</_name>
+    <default>false</default>
+    <uservisible>true</uservisible>
+  </group>
+  <group>
     <id>base-x</id>
     <_name>base-x</_name>
     <default>false</default>

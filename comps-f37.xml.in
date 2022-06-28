@@ -1585,7 +1585,7 @@
       <packagereq type="default">google-noto-sans-gurmukhi-vf-fonts</packagereq>
       <packagereq type="default">google-noto-sans-hebrew-vf-fonts</packagereq>
       <packagereq type="default">google-noto-sans-lao-vf-fonts</packagereq>
-      <packagereq type="default">google-noto-sans-math-fonts</packagereq>
+      <packagereq type="default">google-noto-sans-math-vf-fonts</packagereq>
       <packagereq type="default">google-noto-sans-mono-vf-fonts</packagereq>
       <packagereq type="default">google-noto-sans-sinhala-vf-fonts</packagereq>
       <packagereq type="default">google-noto-sans-thaana-vf-fonts</packagereq>
