@@ -322,6 +322,8 @@
       <packagereq type="mandatory">budgie-control-center</packagereq>
       <packagereq type="mandatory">budgie-desktop</packagereq>
       <packagereq type="mandatory">budgie-desktop-defaults</packagereq>
+      <packagereq type="mandatory">budgie-extras</packagereq>
+      <packagereq type="mandatory">budgie-extras-daemon</packagereq>
       <packagereq type="mandatory">budgie-desktop-view</packagereq>
       <packagereq type="mandatory">budgie-screensaver</packagereq>
       <packagereq type="mandatory">dconf</packagereq>
@@ -601,6 +603,7 @@
       <packagereq type="mandatory">dracut-config-generic</packagereq>
       <packagereq type="mandatory">grubby</packagereq>
       <packagereq type="mandatory">rsync</packagereq>
+      <packagereq arch="x86_64" type="mandatory">syslinux-extlinux</packagereq>
       <packagereq type="mandatory">tar</packagereq>
       <packagereq type="default">console-login-helper-messages-issuegen</packagereq>
       <packagereq type="default">console-login-helper-messages-motdgen</packagereq>
@@ -779,6 +782,40 @@
     </packagelist>
   </group>
   <group>
+    <id>critical-path-budgie</id>
+    <_name>Critical Path (Budgie)</_name>
+    <_description>A set of packages that provide the Critical Path functionality for the Budgie desktop</_description>
+    <default>false</default>
+    <uservisible>false</uservisible>
+    <packagelist>
+      <packagereq type="mandatory">dconf</packagereq>
+      <packagereq type="mandatory">gdm</packagereq>
+      <packagereq type="mandatory">gnome-control-center</packagereq>
+      <packagereq type="mandatory">gnome-session-xsession</packagereq>
+      <packagereq type="mandatory">gnome-shell</packagereq>
+      <packagereq type="mandatory">gnome-terminal</packagereq>
+      <packagereq type="mandatory">gnome-themes-extra</packagereq>
+      <packagereq type="mandatory">gvfs-fuse</packagereq>
+      <packagereq type="mandatory">xorg-x11-drv-amdgpu</packagereq>
+      <packagereq type="mandatory">xorg-x11-drv-ati</packagereq>
+      <packagereq type="mandatory">xorg-x11-drv-evdev</packagereq>
+      <packagereq type="mandatory">xorg-x11-drv-fbdev</packagereq>
+      <packagereq type="mandatory">xorg-x11-drv-intel</packagereq>
+      <packagereq type="mandatory">xorg-x11-drv-libinput</packagereq>
+      <packagereq type="mandatory">xorg-x11-drv-nouveau</packagereq>
+      <packagereq type="mandatory">xorg-x11-drv-qxl</packagereq>
+      <packagereq type="mandatory">xorg-x11-drv-vesa</packagereq>
+      <packagereq type="mandatory">xorg-x11-server-Xorg</packagereq>
+      <packagereq type="mandatory">xorg-x11-xauth</packagereq>
+      <packagereq type="mandatory">xorg-x11-xinit</packagereq>
+      <packagereq type="default">avahi</packagereq>
+      <packagereq type="default">gnome-bluetooth</packagereq>
+      <packagereq type="default">gnome-software</packagereq>
+      <packagereq type="default">libcanberra-gtk3</packagereq>
+      <packagereq type="default">nautilus</packagereq>
+    </packagelist>
+  </group>
+  <group>
     <id>critical-path-deepin-desktop</id>
     <_name>Critical Path (Deepin desktop)</_name>
     <_description>A set of packages that provide the Critical Path functionality for the Deepin desktop</_description>
@@ -915,6 +952,32 @@
     </packagelist>
   </group>
   <group>
+    <id>cutefish-desktop</id>
+    <_name>Cutefish Desktop</_name>
+    <_description>Cutefish desktop is a desktop environment focused on simplicity and praciticality.</_description>
+    <default>false</default>
+    <uservisible>true</uservisible>
+    <packagelist>
+      <packagereq type="mandatory">cutefish-core</packagereq>
+      <packagereq type="mandatory">cutefish-filemanager</packagereq>
+      <packagereq type="mandatory">cutefish-icons</packagereq>
+      <packagereq type="mandatory">cutefish-kwin-plugins</packagereq>
+      <packagereq type="mandatory">cutefish-launcher</packagereq>
+      <packagereq type="mandatory">cutefish-qt-plugins</packagereq>
+      <packagereq type="mandatory">cutefish-screenlocker</packagereq>
+      <packagereq type="mandatory">cutefish-settings</packagereq>
+      <packagereq type="mandatory">cutefish-statusbar</packagereq>
+      <packagereq type="mandatory">cutefish-terminal</packagereq>
+      <packagereq type="mandatory">kwin</packagereq>
+      <packagereq type="mandatory">sddm</packagereq>
+      <packagereq type="default">cutefish-calculator</packagereq>
+      <packagereq type="default">cutefish-dock</packagereq>
+      <packagereq type="default">cutefish-gtk-themes</packagereq>
+      <packagereq type="default">sddm-theme-cutefish</packagereq>
+      <packagereq type="default">ultramarine-backgrounds-common</packagereq>
+    </packagelist>
+  </group>
+  <group>
     <id>d-development</id>
     <_name>D Development Tools and Libraries</_name>
     <_description>These include development tools and libraries such as ldc, and geany-tag.</_description>
@@ -1002,6 +1065,7 @@
       <packagereq type="conditional" requires="blender">blender-luxcorerender</packagereq>
       <packagereq type="conditional" requires="darktable">darktable-tools-noise</packagereq>
       <packagereq type="conditional" requires="gimp">gimp-data-extras</packagereq>
+      <packagereq type="conditional" requires="gimp">gimp-dbp</packagereq>
       <packagereq type="conditional" requires="gimp">gimp-dds-plugin</packagereq>
       <packagereq type="conditional" requires="gimp">gimp-elsamuko</packagereq>
       <packagereq type="conditional" requires="gimp">gimp-fourier-plugin</packagereq>
@@ -1603,16 +1667,15 @@
     </packagelist>
   </group>
   <group>
-    <id>fedora-packager</id>
-    <_name>Fedora Packager</_name>
-    <_description>Tools and utilities needed by a Fedora Packager</_description>
+    <id>ultramarine-packager</id>
+    <_name>Ultramarine Packager</_name>
+    <_description>Tools and utilities needed by an Ultramarine Packager</_description>
     <default>false</default>
     <uservisible>false</uservisible>
     <packagelist>
       <packagereq type="mandatory">bodhi-client</packagereq>
       <packagereq type="mandatory">curl</packagereq>
-      <packagereq type="mandatory">fedora-easy-karma</packagereq>
-      <packagereq type="mandatory">fedora-packager</packagereq>
+      <packagereq type="mandatory">umpkg</packagereq>
       <packagereq type="mandatory">git</packagereq>
       <packagereq type="mandatory">koji</packagereq>
       <packagereq type="mandatory">make</packagereq>
@@ -1632,9 +1695,125 @@
     <default>false</default>
     <uservisible>false</uservisible>
     <packagelist>
-      <packagereq>fedora-bookmarks</packagereq>
       <packagereq type="mandatory">firefox</packagereq>
       <packagereq type="default">libglvnd-gles</packagereq>
+    </packagelist>
+  </group>
+  <group>
+    <id>flagship-product</id>
+    <!-- Translators: Don't translate this product name -->
+    <_name>Ultramarine Flagship product core</_name>
+    <_description>Packages mandatory for the workstation product.</_description>
+    <default>false</default>
+    <uservisible>false</uservisible>
+    <packagelist>
+      <packagereq type="mandatory">dnf</packagereq>
+      <packagereq type="mandatory">linux-firmware</packagereq>
+      <packagereq type="mandatory">microcode_ctl</packagereq>
+      <packagereq type="mandatory">sudo</packagereq>
+      <packagereq type="mandatory">systemd-udev</packagereq>
+      <packagereq type="mandatory">tar</packagereq>
+      <packagereq type="mandatory">xorg-x11-drv-libinput</packagereq>
+      <packagereq type="default">abrt-cli</packagereq>
+      <packagereq type="default">abrt-desktop</packagereq>
+      <packagereq type="default">abrt-java-connector</packagereq>
+      <packagereq type="default">acl</packagereq>
+      <packagereq type="default">adwaita-qt5</packagereq>
+      <packagereq type="default">attr</packagereq>
+      <packagereq type="default">bash-completion</packagereq>
+      <packagereq type="default">zsh</packagereq>
+      <packagereq type="default">bc</packagereq>
+      <packagereq type="default">bind-utils</packagereq>
+      <packagereq type="default">btrfs-progs</packagereq>
+      <packagereq type="default">bzip2</packagereq>
+      <packagereq type="default">chrony</packagereq>
+      <packagereq type="default">cifs-utils</packagereq>
+      <packagereq type="default">compsize</packagereq>
+      <packagereq type="default">cpio</packagereq>
+      <packagereq type="default">cryptsetup</packagereq>
+      <packagereq type="default">cyrus-sasl-plain</packagereq>
+      <packagereq type="default">default-editor</packagereq>
+      <packagereq type="default">deltarpm</packagereq>
+      <packagereq type="default">desktop-backgrounds-gnome</packagereq>
+      <packagereq type="default">dnf-plugins-core</packagereq>
+      <packagereq type="default">dos2unix</packagereq>
+      <packagereq type="default">dosfstools</packagereq>
+      <packagereq type="default">ethtool</packagereq>
+      <packagereq type="default">exfatprogs</packagereq>
+      <packagereq type="default">file</packagereq>
+      <packagereq type="default">fpaste</packagereq>
+      <packagereq type="default">fros-gnome</packagereq>
+      <packagereq type="default">gamemode</packagereq>
+      <packagereq type="default">git</packagereq>
+      <packagereq type="default">glibc-all-langpacks</packagereq>
+      <packagereq type="default">gnome-shell-extension-background-logo</packagereq>
+      <packagereq type="default">gnupg2</packagereq>
+      <packagereq type="default">hunspell</packagereq>
+      <packagereq type="default">ibus-anthy</packagereq>
+      <packagereq type="default">ibus-gtk3</packagereq>
+      <packagereq type="default">ibus-hangul</packagereq>
+      <packagereq type="default">ibus-libpinyin</packagereq>
+      <packagereq type="default">ibus-libzhuyin</packagereq>
+      <packagereq type="default">ibus-m17n</packagereq>
+      <packagereq type="default">ibus-typing-booster</packagereq>
+      <packagereq type="default">iptstate</packagereq>
+      <packagereq type="default">jwhois</packagereq>
+      <packagereq type="default">logrotate</packagereq>
+      <packagereq type="default">lrzsz</packagereq>
+      <packagereq type="default">lsof</packagereq>
+      <packagereq type="default">mailcap</packagereq>
+      <packagereq type="default">man-pages</packagereq>
+      <packagereq type="default">mcelog</packagereq>
+      <packagereq type="default">mdadm</packagereq>
+      <packagereq type="default">mediawriter</packagereq>
+      <packagereq type="default">mlocate</packagereq>
+      <packagereq type="default">mtr</packagereq>
+      <packagereq type="default">net-tools</packagereq>
+      <packagereq type="default">NetworkManager-config-connectivity-fedora</packagereq>
+      <packagereq type="default">nfs-utils</packagereq>
+      <packagereq type="default">nmap-ncat</packagereq>
+      <packagereq type="default">nss-mdns</packagereq>
+      <packagereq type="default">ntfs-3g</packagereq>
+      <packagereq type="default">ntfsprogs</packagereq>
+      <packagereq type="default">opensc</packagereq>
+      <packagereq type="default">pam_afs_session</packagereq>
+      <packagereq type="default">passwdqc</packagereq>
+      <packagereq type="default">pciutils</packagereq>
+      <packagereq type="default">pinentry-gnome3</packagereq>
+      <packagereq type="default">pinfo</packagereq>
+      <packagereq type="default">plymouth-system-theme</packagereq>
+      <packagereq type="default">policycoreutils-python-utils</packagereq>
+      <packagereq type="default">psacct</packagereq>
+      <packagereq type="default">psmisc</packagereq>
+      <packagereq type="default">python3-dnf-plugin-system-upgrade</packagereq>
+      <packagereq type="default">qgnomeplatform</packagereq>
+      <packagereq type="default">qt5-qtbase</packagereq>
+      <packagereq type="default">qt5-qtbase-gui</packagereq>
+      <packagereq type="default">qt5-qtdeclarative</packagereq>
+      <packagereq type="default">qt5-qtxmlpatterns</packagereq>
+      <packagereq type="default">quota</packagereq>
+      <packagereq type="default">realmd</packagereq>
+      <packagereq type="default">rhythmbox</packagereq>
+      <packagereq type="default">rsync</packagereq>
+      <packagereq type="default">sos</packagereq>
+      <packagereq type="default">sssd</packagereq>
+      <packagereq type="default">symlinks</packagereq>
+      <packagereq type="default">tcpdump</packagereq>
+      <packagereq type="default">thermald</packagereq>
+      <packagereq type="default">time</packagereq>
+      <packagereq type="default">traceroute</packagereq>
+      <packagereq type="default">tree</packagereq>
+      <packagereq type="default">ultramarine-backgrounds-common</packagereq>
+      <packagereq type="default">ultramarine-flagship-filesystem</packagereq>
+      <packagereq type="default">ultramarine-release-flagship</packagereq>
+      <packagereq type="default">unoconv</packagereq>
+      <packagereq type="default">unzip</packagereq>
+      <packagereq type="default">uresourced</packagereq>
+      <packagereq type="default">usbutils</packagereq>
+      <packagereq type="default">wget</packagereq>
+      <packagereq type="default">which</packagereq>
+      <packagereq type="default">words</packagereq>
+      <packagereq type="default">zip</packagereq>
     </packagelist>
   </group>
   <group>
@@ -1686,7 +1865,6 @@
       <packagereq type="default">abattis-cantarell-vf-fonts</packagereq>
       <packagereq type="default">google-noto-emoji-color-fonts</packagereq>
       <packagereq type="default">google-noto-naskh-arabic-vf-fonts</packagereq>
-      <packagereq type="default">google-noto-sans-arabic-vf-fonts</packagereq>
       <packagereq type="default">google-noto-sans-armenian-vf-fonts</packagereq>
       <packagereq type="default">google-noto-sans-canadian-aboriginal-vf-fonts</packagereq>
       <packagereq type="default">google-noto-sans-cherokee-vf-fonts</packagereq>
@@ -1723,7 +1901,6 @@
       <packagereq type="default">sil-padauk-fonts</packagereq>
       <packagereq type="default">stix-fonts</packagereq>
       <packagereq type="default">thai-scalable-waree-fonts</packagereq>
-      <packagereq type="default">vazirmatn-vf-fonts</packagereq>
       <packagereq type="optional">aajohan-comfortaa-fonts</packagereq>
       <packagereq type="optional">adf-accanthis-2-fonts</packagereq>
       <packagereq type="optional">adf-accanthis-3-fonts</packagereq>
@@ -1890,21 +2067,18 @@
       <packagereq type="optional">google-droid-sans-fonts</packagereq>
       <packagereq type="optional">google-droid-sans-mono-fonts</packagereq>
       <packagereq type="optional">google-droid-serif-fonts</packagereq>
-      <packagereq type="optional">google-noto-emoji-fonts</packagereq>
+      <packagereq type="optional">twitter-twemoji-fonts</packagereq>
       <packagereq type="optional">google-noto-kufi-arabic-vf-fonts</packagereq>
-      <packagereq type="optional">google-noto-looped-lao-ui-vf-fonts</packagereq>
-      <packagereq type="optional">google-noto-looped-lao-vf-fonts</packagereq>
-      <packagereq type="optional">google-noto-looped-thai-ui-vf-fonts</packagereq>
-      <packagereq type="optional">google-noto-looped-thai-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-music-fonts</packagereq>
       <packagereq type="optional">google-noto-naskh-arabic-ui-vf-fonts</packagereq>
-      <packagereq type="optional">google-noto-nastaliq-urdu-vf-fonts</packagereq>
+      <packagereq type="optional">google-noto-nastaliq-urdu-fonts</packagereq>
       <packagereq type="optional">google-noto-rashi-hebrew-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-adlam-unjoined-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-adlam-vf-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-anatolian-hieroglyphs-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-anatolian-hieroglyphs-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-arabic-ui-vf-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-avestan-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-arabic-vf-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-avestan-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-balinese-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-bamum-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-bassa-vah-vf-fonts</packagereq>
@@ -1913,46 +2087,42 @@
       <packagereq type="optional">google-noto-sans-bengali-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-bhaiksuki-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-brahmi-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-buginese-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-buhid-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-carian-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-buginese-vf-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-buhid-vf-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-carian-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-caucasian-albanian-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-chakma-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-cham-vf-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-chorasmian-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-cjk-jp-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-cjk-kr-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-cjk-sc-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-cjk-tc-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-coptic-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-cuneiform-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-cypriot-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-cypro-minoan-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-deseret-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-devanagari-ui-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-cuneiform-vf-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-cypriot-vf-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-deseret-vf-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-devanagari-ui-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-devanagari-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-display-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-duployan-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-egyptian-hieroglyphs-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-egyptian-hieroglyphs-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-elbasan-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-elymaic-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-elymaic-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-glagolitic-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-gothic-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-gothic-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-grantha-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-gujarati-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-gujarati-ui-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-gujarati-vf-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-gunjala-gondi-vf-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-gunjala-gondi-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-gurmukhi-ui-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-hanifi-rohingya-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-hanunoo-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-hatran-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-hebrew-droid-vf-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-hebrew-new-vf-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-imperial-aramaic-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-hatran-vf-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-imperial-aramaic-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-indic-siyaq-numbers-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-inscriptional-pahlavi-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-inscriptional-parthian-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-javanese-vf-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-javanese-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-jp-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-kaithi-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-kannada-ui-vf-fonts</packagereq>
@@ -1964,22 +2134,23 @@
       <packagereq type="optional">google-noto-sans-khojki-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-khudawadi-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-kr-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-lao-looped-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-lao-ui-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-lepcha-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-limbu-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-linear-a-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-linear-b-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-linear-a-vf-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-linear-b-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-lisu-vf-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-lycian-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-lydian-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-lycian-vf-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-lydian-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-mahajani-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-malayalam-ui-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-malayalam-vf-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-mandaic-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-mandaic-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-manichaean-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-marchen-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-marchen-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-masaram-gondi-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-mayan-numerals-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-mayan-numerals-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-medefaidrin-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-meetei-mayek-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-meeteimayek-vf-fonts</packagereq>
@@ -1992,17 +2163,16 @@
       <packagereq type="optional">google-noto-sans-mono-cjk-kr-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-mono-cjk-sc-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-mono-cjk-tc-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-mro-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-multani-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-mro-vf-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-multani-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-myanmar-ui-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-myanmar-vf-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-nabataean-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-nandinagari-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-nabataean-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-new-tai-lue-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-newa-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-nko-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-nushu-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-ogham-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-ogham-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-ol-chiki-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-old-hungarian-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-old-italic-fonts</packagereq>
@@ -2012,15 +2182,15 @@
       <packagereq type="optional">google-noto-sans-old-sogdian-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-old-south-arabian-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-old-turkic-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-oriya-ui-vf-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-oriya-vf-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-oriya-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-oriya-ui-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-osage-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-osmanya-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-osmanya-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-pahawh-hmong-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-palmyrene-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-pau-cin-hau-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-phags-pa-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-phoenician-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-phoenician-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-psalter-pahlavi-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-rejang-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-runic-vf-fonts</packagereq>
@@ -2028,31 +2198,31 @@
       <packagereq type="optional">google-noto-sans-saurashtra-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-sc-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-sharada-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-shavian-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-shavian-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-siddham-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-signwriting-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-sinhala-ui-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-sogdian-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-sora-sompeng-vf-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-soyombo-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-soyombo-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-sundanese-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-syloti-nagri-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-symbols-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-symbols2-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-syriac-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-tagalog-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-tagbanwa-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-tagbanwa-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-tai-le-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-tai-tham-vf-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-tai-viet-vf-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-takri-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-tai-viet-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-takri-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-tamil-supplement-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-tamil-ui-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-tamil-vf-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-tangsa-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-tc-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-telugu-ui-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-telugu-vf-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-thai-looped-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-thai-ui-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-thai-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-tifinagh-adrar-fonts</packagereq>
@@ -2068,12 +2238,11 @@
       <packagereq type="optional">google-noto-sans-tifinagh-sil-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-tifinagh-tawellemmet-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-tirhuta-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-ugaritic-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-vai-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-vithkuqi-vf-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-wancho-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-warang-citi-fonts</packagereq>
-      <packagereq type="optional">google-noto-sans-yi-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-ugaritic-vf-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-vai-vf-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-wancho-vf-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-warang-citi-vf-fonts</packagereq>
+      <packagereq type="optional">google-noto-sans-yi-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-sans-zanabazar-square-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-serif-ahom-fonts</packagereq>
       <packagereq type="optional">google-noto-serif-armenian-vf-fonts</packagereq>
@@ -2086,8 +2255,7 @@
       <packagereq type="optional">google-noto-serif-cjk-ttc-fonts</packagereq>
       <packagereq type="optional">google-noto-serif-devanagari-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-serif-display-vf-fonts</packagereq>
-      <packagereq type="optional">google-noto-serif-dives-akuru-fonts</packagereq>
-      <packagereq type="optional">google-noto-serif-dogra-vf-fonts</packagereq>
+      <packagereq type="optional">google-noto-serif-dogra-fonts</packagereq>
       <packagereq type="optional">google-noto-serif-ethiopic-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-serif-georgian-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-serif-grantha-fonts</packagereq>
@@ -2100,23 +2268,18 @@
       <packagereq type="optional">google-noto-serif-khojki-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-serif-kr-fonts</packagereq>
       <packagereq type="optional">google-noto-serif-lao-vf-fonts</packagereq>
-      <packagereq type="optional">google-noto-serif-makasar-fonts</packagereq>
       <packagereq type="optional">google-noto-serif-malayalam-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-serif-myanmar-fonts</packagereq>
       <packagereq type="optional">google-noto-serif-nyiakeng-puachue-hmong-vf-fonts</packagereq>
-      <packagereq type="optional">google-noto-serif-old-uyghur-fonts</packagereq>
-      <packagereq type="optional">google-noto-serif-oriya-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-serif-sc-fonts</packagereq>
       <packagereq type="optional">google-noto-serif-sinhala-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-serif-tamil-slanted-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-serif-tamil-vf-fonts</packagereq>
-      <packagereq type="optional">google-noto-serif-tangut-fonts</packagereq>
+      <packagereq type="optional">google-noto-serif-tangut-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-serif-tc-fonts</packagereq>
       <packagereq type="optional">google-noto-serif-telugu-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-serif-thai-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-serif-tibetan-vf-fonts</packagereq>
-      <packagereq type="optional">google-noto-serif-toto-vf-fonts</packagereq>
-      <packagereq type="optional">google-noto-serif-vithkuqi-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-serif-yezidi-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-traditional-nushu-fonts</packagereq>
       <packagereq type="optional">google-roboto-condensed-fonts</packagereq>
@@ -2983,7 +3146,6 @@
       <packagereq>open-vm-tools-desktop</packagereq>
       <packagereq>qemu-guest-agent</packagereq>
       <packagereq>spice-vdagent</packagereq>
-      <packagereq>spice-webdavd</packagereq>
       <packagereq>virtualbox-guest-additions</packagereq>
     </packagelist>
   </group>
@@ -3053,6 +3215,7 @@
       <packagereq type="default">zd1211-firmware</packagereq>
       <packagereq type="optional">acpi</packagereq>
       <packagereq type="optional">acpitool</packagereq>
+      <packagereq type="optional">akmod-nvidia</packagereq>
       <packagereq type="optional">alsa-firmware</packagereq>
       <packagereq arch="aarch64" type="optional">bcm283x-firmware</packagereq>
       <packagereq arch="x86_64" type="optional">cmospwd</packagereq>
@@ -3351,6 +3514,8 @@
       <packagereq type="mandatory">sddm-kcm</packagereq>
       <packagereq type="conditional" requires="at-spi2-core">qt-at-spi</packagereq>
       <packagereq type="default">abrt-desktop</packagereq>
+      <packagereq type="default">ultramarine-plasma-theme</packagereq>
+      <packagereq type="default">ultramarine-backgrounds-kde</packagereq>
       <packagereq type="default">adwaita-gtk2-theme</packagereq>
       <packagereq type="default">akregator</packagereq>
       <packagereq type="default">bluedevil</packagereq>
@@ -4455,6 +4620,67 @@
     </packagelist>
   </group>
   <group>
+    <id>pantheon-desktop</id>
+    <_name>Pantheon Desktop</_name>
+    <_description>The Pantheon desktop environment is the DE that powers elementaryOS.</_description>
+    <default>false</default>
+    <uservisible>true</uservisible>
+    <packagelist>
+      <packagereq type="mandatory">contractor</packagereq>
+      <packagereq type="mandatory">elementary-capnet-assist</packagereq>
+      <packagereq type="mandatory">elementary-icon-theme</packagereq>
+      <packagereq type="mandatory">elementary-notifications</packagereq>
+      <packagereq type="mandatory">elementary-sound-theme</packagereq>
+      <packagereq type="mandatory">elementary-theme</packagereq>
+      <packagereq type="mandatory">elementary-wallpapers</packagereq>
+      <packagereq type="mandatory">gala</packagereq>
+      <packagereq type="mandatory">gnome-session</packagereq>
+      <packagereq type="mandatory">pantheon-agent-geoclue2</packagereq>
+      <packagereq type="mandatory">pantheon-agent-polkit</packagereq>
+      <packagereq type="mandatory">pantheon-session-settings</packagereq>
+      <packagereq type="mandatory">plank</packagereq>
+      <packagereq type="mandatory">wingpanel</packagereq>
+      <packagereq type="mandatory">wingpanel-applications-menu</packagereq>
+      <packagereq type="mandatory">wingpanel-indicator-bluetooth</packagereq>
+      <packagereq type="mandatory">wingpanel-indicator-datetime</packagereq>
+      <packagereq type="mandatory">wingpanel-indicator-keyboard</packagereq>
+      <packagereq type="mandatory">wingpanel-indicator-network</packagereq>
+      <packagereq type="mandatory">wingpanel-indicator-nightlight</packagereq>
+      <packagereq type="mandatory">wingpanel-indicator-notifications</packagereq>
+      <packagereq type="mandatory">wingpanel-indicator-power</packagereq>
+      <packagereq type="mandatory">wingpanel-indicator-session</packagereq>
+      <packagereq type="mandatory">wingpanel-indicator-sound</packagereq>
+      <packagereq type="default">elementary-calculator</packagereq>
+      <packagereq type="default">elementary-calendar</packagereq>
+      <packagereq type="default">elementary-camera</packagereq>
+      <packagereq type="default">elementary-code</packagereq>
+      <packagereq type="default">elementary-files</packagereq>
+      <packagereq type="default">elementary-greeter</packagereq>
+      <packagereq type="default">elementary-music</packagereq>
+      <packagereq type="default">elementary-photos</packagereq>
+      <packagereq type="default">elementary-print</packagereq>
+      <packagereq type="default">elementary-screenshot-tool</packagereq>
+      <packagereq type="default">elementary-shortcut-overlay</packagereq>
+      <packagereq type="default">elementary-sideload</packagereq>
+      <packagereq type="default">elementary-terminal</packagereq>
+      <packagereq type="default">elementary-videos</packagereq>
+      <packagereq type="default">switchboard</packagereq>
+      <packagereq type="default">switchboard-plug-a11y</packagereq>
+      <packagereq type="default">switchboard-plug-about</packagereq>
+      <packagereq type="default">switchboard-plug-applications</packagereq>
+      <packagereq type="default">switchboard-plug-bluetooth</packagereq>
+      <packagereq type="default">switchboard-plug-display</packagereq>
+      <packagereq type="default">switchboard-plug-keyboard</packagereq>
+      <packagereq type="default">switchboard-plug-mouse-touchpad</packagereq>
+      <packagereq type="default">switchboard-plug-networking</packagereq>
+      <packagereq type="default">switchboard-plug-notifications</packagereq>
+      <packagereq type="default">switchboard-plug-pantheon-shell</packagereq>
+      <packagereq type="default">switchboard-plug-printers</packagereq>
+      <packagereq type="default">switchboard-plug-sharing</packagereq>
+      <packagereq type="default">switchboard-plug-sound</packagereq>
+    </packagelist>
+  </group>
+  <group>
     <id>perl</id>
     <_name>Perl Development</_name>
     <_description>Support for developing programs in the Perl programming language.</_description>
@@ -5195,6 +5421,7 @@
       <packagereq>cryptsetup</packagereq>
       <packagereq>cyrus-sasl-plain</packagereq>
       <packagereq>dbus</packagereq>
+      <packagereq>ultramarine-shell-config</packagereq>
       <packagereq>default-editor</packagereq>
       <packagereq>deltarpm</packagereq>
       <packagereq>dos2unix</packagereq>
@@ -5209,6 +5436,7 @@
       <packagereq>hunspell</packagereq>
       <packagereq>iptstate</packagereq>
       <packagereq>irqbalance</packagereq>
+      <packagereq>jwhois</packagereq>
       <packagereq>logrotate</packagereq>
       <packagereq>lsof</packagereq>
       <packagereq>mailcap</packagereq>
@@ -5813,6 +6041,7 @@
       <packagereq type="default">thermald</packagereq>
       <packagereq type="default">time</packagereq>
       <packagereq type="default">toolbox</packagereq>
+      <packagereq type="default">toolbox</packagereq>
       <packagereq type="default">traceroute</packagereq>
       <packagereq type="default">tree</packagereq>
       <packagereq type="default">unoconv</packagereq>
@@ -6189,6 +6418,29 @@
       <groupid>xfce-office</groupid>
       <groupid>3d-printing</groupid>
       <groupid>cloud-management</groupid>
+    </optionlist>
+  </environment>
+  <environment>
+    <id>flagship-product-environment</id>
+    <_name>Ultramarine Flagship</_name>
+    <_description>Ultramarine Flagship is the flagship Ultramarine experience.</_description>
+    <display_order>2</display_order>
+    <grouplist>
+      <groupid>base-x</groupid>
+      <groupid>container-management</groupid>
+      <groupid>core</groupid>
+      <groupid>firefox</groupid>
+      <groupid>fonts</groupid>
+      <groupid>budgie-desktop</groupid>
+      <groupid>guest-desktop-agents</groupid>
+      <groupid>hardware-support</groupid>
+      <groupid>libreoffice</groupid>
+      <groupid>multimedia</groupid>
+      <groupid>networkmanager-submodules</groupid>
+      <groupid>printing</groupid>
+    </grouplist>
+    <optionlist>
+      <groupid>arm-tools</groupid>
     </optionlist>
   </environment>
   <environment>
