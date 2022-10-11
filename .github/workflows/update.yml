@@ -28,11 +28,20 @@ jobs:
 
       - name: Install dependencies
         run: |
-          sudo dnf install -y make intltool libxslt
+          sudo dnf install -y make intltool libxslt subatomic-cli
 
       - name: Build comps file
         run: |
           make comps-f${{matrix.version}}.xml
+
+
+      - name: Push to subatomic
+        run: |
+          subatomic-cli upload-comps \
+            --server https://subatomic.fyralabs.com \
+            --token ${{ secrets.SUBATOMIC_TOKEN }} \
+            ${{ matrix.version }} anda-build/rpm/rpms/*
+
 
 
       # upload artifacts
