@@ -1,0 +1,43 @@
+name: Push comps updates
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    container:
+      image: fedora:37
+
+    strategy:
+      fail-fast: false
+      matrix:
+        version:
+          - 37
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install repositories
+        run: |
+          sudo dnf install -y dnf-plugins-core
+          sudo dnf config-manager --add-repo https://github.com/andaman-common-pkgs/subatomic-repos/raw/main/ad${{matrix.version}}.repo
+
+      - name: Install dependencies
+        run: |
+          sudo dnf install -y make intltool libxslt
+
+      - name: Build comps file
+        run: |
+          make comps-f${{matrix.version}}.xml
+
+
+      # upload artifacts
+      - uses: actions/upload-artifact@v2
+        with:
+          name: comps-f${{matrix.version}}.xml
+          path: comps-f${{matrix.version}}.xml
+
