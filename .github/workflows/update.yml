@@ -40,7 +40,7 @@ jobs:
           subatomic-cli upload-comps \
             --server https://subatomic.fyralabs.com \
             --token ${{ secrets.SUBATOMIC_TOKEN }} \
-            ${{ matrix.version }} comps-f${{ matrix.version }}.xml
+            um${{ matrix.version }} comps-f${{ matrix.version }}.xml
 
 
 
