@@ -364,7 +364,6 @@
       <packagereq type="default">gvfs-mtp</packagereq>
       <packagereq type="default">gvfs-smb</packagereq>
       <packagereq type="default">libcanberra-gtk3</packagereq>
-      <packagereq type="default">libproxy-webkitgtk4</packagereq>
       <packagereq type="default">librsvg2</packagereq>
       <packagereq type="default">libsane-hpaio</packagereq>
       <packagereq type="default">mesa-dri-drivers</packagereq>
@@ -4253,7 +4252,6 @@
     <packagelist>
       <packagereq>alsa-ucm</packagereq>
       <packagereq>alsa-utils</packagereq>
-      <packagereq>gstreamer1-plugin-openh264</packagereq>
       <packagereq>gstreamer1-plugins-bad-free</packagereq>
       <packagereq>gstreamer1-plugins-good</packagereq>
       <packagereq>gstreamer1-plugins-ugly-free</packagereq>
