@@ -24,7 +24,7 @@ jobs:
       - name: Install repositories
         run: |
           sudo dnf install -y dnf-plugins-core
-          sudo dnf config-manager --add-repo https://github.com/andaman-common-pkgs/subatomic-repos/raw/main/ad${{matrix.version}}.repo
+          sudo dnf config-manager --add-repo https://github.com/andaman-common-pkgs/subatomic-repos/raw/main/terra${{matrix.version}}.repo
 
       - name: Install dependencies
         run: |
