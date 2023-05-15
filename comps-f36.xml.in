@@ -1656,28 +1656,6 @@
     </packagelist>
   </group>
   <group>
-    <id>ultramarine-packager</id>
-    <_name>Ultramarine Packager</_name>
-    <_description>Tools and utilities needed by an Ultramarine Packager</_description>
-    <default>false</default>
-    <uservisible>false</uservisible>
-    <packagelist>
-      <packagereq type="mandatory">bodhi-client</packagereq>
-      <packagereq type="mandatory">curl</packagereq>
-      <packagereq type="mandatory">umpkg</packagereq>
-      <packagereq type="mandatory">git</packagereq>
-      <packagereq type="mandatory">koji</packagereq>
-      <packagereq type="mandatory">make</packagereq>
-      <packagereq type="mandatory">mock</packagereq>
-      <packagereq type="mandatory">redhat-rpm-config</packagereq>
-      <packagereq type="mandatory">rpm-build</packagereq>
-      <packagereq type="mandatory">rpmdevtools</packagereq>
-      <packagereq type="optional">auto-destdir</packagereq>
-      <packagereq type="optional">cpanspec</packagereq>
-      <packagereq type="optional">cvs</packagereq>
-    </packagelist>
-  </group>
-  <group>
     <id>firefox</id>
     <_name>Firefox Web Browser</_name>
     <_description>The Firefox web browser</_description>
@@ -1710,7 +1688,6 @@
       <packagereq type="default">adwaita-qt5</packagereq>
       <packagereq type="default">attr</packagereq>
       <packagereq type="default">bash-completion</packagereq>
-      <packagereq type="default">zsh</packagereq>
       <packagereq type="default">bc</packagereq>
       <packagereq type="default">bind-utils</packagereq>
       <packagereq type="default">btrfs-progs</packagereq>
@@ -1803,6 +1780,7 @@
       <packagereq type="default">which</packagereq>
       <packagereq type="default">words</packagereq>
       <packagereq type="default">zip</packagereq>
+      <packagereq type="default">zsh</packagereq>
     </packagelist>
   </group>
   <group>
@@ -2056,7 +2034,6 @@
       <packagereq type="optional">google-droid-sans-fonts</packagereq>
       <packagereq type="optional">google-droid-sans-mono-fonts</packagereq>
       <packagereq type="optional">google-droid-serif-fonts</packagereq>
-      <packagereq type="optional">twitter-twemoji-fonts</packagereq>
       <packagereq type="optional">google-noto-kufi-arabic-vf-fonts</packagereq>
       <packagereq type="optional">google-noto-music-fonts</packagereq>
       <packagereq type="optional">google-noto-naskh-arabic-ui-vf-fonts</packagereq>
@@ -3494,8 +3471,6 @@
       <packagereq type="mandatory">sddm-kcm</packagereq>
       <packagereq type="conditional" requires="at-spi2-core">qt-at-spi</packagereq>
       <packagereq type="default">abrt-desktop</packagereq>
-      <packagereq type="default">ultramarine-plasma-theme</packagereq>
-      <packagereq type="default">ultramarine-backgrounds-kde</packagereq>
       <packagereq type="default">adwaita-gtk2-theme</packagereq>
       <packagereq type="default">akregator</packagereq>
       <packagereq type="default">bluedevil</packagereq>
@@ -3576,6 +3551,8 @@
       <packagereq type="default">qt5-qtdeclarative</packagereq>
       <packagereq type="default">spectacle</packagereq>
       <packagereq type="default">systemd-oomd-defaults</packagereq>
+      <packagereq type="default">ultramarine-backgrounds-kde</packagereq>
+      <packagereq type="default">ultramarine-plasma-theme</packagereq>
       <packagereq type="default">xdg-desktop-portal-gnome</packagereq>
       <packagereq type="default">xorg-x11-drv-libinput</packagereq>
       <packagereq type="optional">plasma-pk-updates</packagereq>
@@ -5393,7 +5370,6 @@
       <packagereq>cryptsetup</packagereq>
       <packagereq>cyrus-sasl-plain</packagereq>
       <packagereq>dbus</packagereq>
-      <packagereq>ultramarine-shell-config</packagereq>
       <packagereq>default-editor</packagereq>
       <packagereq>deltarpm</packagereq>
       <packagereq>dos2unix</packagereq>
@@ -5443,6 +5419,7 @@
       <packagereq>time</packagereq>
       <packagereq>traceroute</packagereq>
       <packagereq>tree</packagereq>
+      <packagereq>ultramarine-shell-config</packagereq>
       <packagereq>unzip</packagereq>
       <packagereq>usbutils</packagereq>
       <packagereq>util-linux-user</packagereq>
@@ -5771,6 +5748,28 @@
       <packagereq>tomcat-admin-webapps</packagereq>
       <packagereq>tomcat-native</packagereq>
       <packagereq>tomcat-webapps</packagereq>
+    </packagelist>
+  </group>
+  <group>
+    <id>ultramarine-packager</id>
+    <_name>Ultramarine Packager</_name>
+    <_description>Tools and utilities needed by an Ultramarine Packager</_description>
+    <default>false</default>
+    <uservisible>false</uservisible>
+    <packagelist>
+      <packagereq type="mandatory">bodhi-client</packagereq>
+      <packagereq type="mandatory">curl</packagereq>
+      <packagereq type="mandatory">git</packagereq>
+      <packagereq type="mandatory">koji</packagereq>
+      <packagereq type="mandatory">make</packagereq>
+      <packagereq type="mandatory">mock</packagereq>
+      <packagereq type="mandatory">redhat-rpm-config</packagereq>
+      <packagereq type="mandatory">rpm-build</packagereq>
+      <packagereq type="mandatory">rpmdevtools</packagereq>
+      <packagereq type="mandatory">umpkg</packagereq>
+      <packagereq type="optional">auto-destdir</packagereq>
+      <packagereq type="optional">cpanspec</packagereq>
+      <packagereq type="optional">cvs</packagereq>
     </packagelist>
   </group>
   <group>
