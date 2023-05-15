@@ -10,12 +10,13 @@ jobs:
   update:
     runs-on: ubuntu-latest
     container:
-      image: fedora:37
+      image: fedora:38
 
     strategy:
       fail-fast: false
       matrix:
         version:
+          - 38
           - 37
 
     steps:
