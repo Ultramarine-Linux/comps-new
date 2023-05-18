@@ -308,7 +308,7 @@
     <uservisible>true</uservisible>
     <packagelist>
       <packagereq type="mandatory">budgie-desktop</packagereq>
-      <packagereq type="mandatory">budgie-desktop=view</packagereq>
+      <packagereq type="mandatory">budgie-desktop-view</packagereq>
       <packagereq type="mandatory">budgie-extras</packagereq>
       <packagereq type="mandatory">budgie-extras-daemon</packagereq>
       <packagereq type="mandatory">dconf</packagereq>
