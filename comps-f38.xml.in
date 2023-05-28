@@ -1662,7 +1662,7 @@
       <packagereq type="default">mcelog</packagereq>
       <packagereq type="default">mdadm</packagereq>
       <packagereq type="default">mediawriter</packagereq>
-      <packagereq type="default">mlocate</packagereq>
+      <packagereq type="default">plocate</packagereq>
       <packagereq type="default">mtr</packagereq>
       <packagereq type="default">net-tools</packagereq>
       <packagereq type="default">NetworkManager-config-connectivity-fedora</packagereq>
